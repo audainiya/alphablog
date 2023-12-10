@@ -1,8 +1,8 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
     <title>Alphablog</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1", shrink-to-fit=no">
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,7 +10,12 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
+    <%= render "layouts/navigation" %>
     <%= render "layouts/messages" %>
-    <%= yield %>
+    <div class="bg-secondary">
+      <div class="container">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>
