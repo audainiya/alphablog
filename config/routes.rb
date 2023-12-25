@@ -13,4 +13,7 @@ Rails.application.routes.draw do
   delete 'articles/:id/delete' => 'articles#destroy', as: 'articles_delete'
   get '/articles/:id/delete' => 'articles#destroy'
   
+  delete 'users/:id/delete' => 'users#destroy', as: 'users_delete'
+  get '/users/:id/delete' => 'users#destroy'
+  
 end
